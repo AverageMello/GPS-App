@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/prototypetitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Livetracking ÖPNV - Protoyp 1.0"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/prototypestatustitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Status:"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prototypetitle" />
+
+    <TextView
+        android:id="@+id/prototypereturncodetitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Letzte Antwort:"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prototypeserveriptitle" />
+
+    <TextView
+        android:id="@+id/prototypestatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="App gestartet"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/prototypestatustitle"
+        app:layout_constraintStart_toStartOf="@+id/prototypeserverip" />
+
+    <TextView
+        android:id="@+id/prototypereturncode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Keine Verbindung zum Server"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/prototypereturncodetitle"
+        app:layout_constraintStart_toEndOf="@+id/prototypereturncodetitle" />
+
+    <TextView
+        android:id="@+id/prototypeserveriptitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Server:"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prototypestatustitle" />
+
+    <TextView
+        android:id="@+id/prototypeserverip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Keine IP vorhanden"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/prototypeserveriptitle"
+        app:layout_constraintStart_toStartOf="@+id/prototypereturncode" />
+
+    <TextView
+        android:id="@+id/prototypeserverstatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Nicht verbunden"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/prototypeserverip"
+        app:layout_constraintStart_toEndOf="@+id/prototypeserverip" />
+
+    <TextView
+        android:id="@+id/prototypelontitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Longitude:"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prototypereturncodetitle" />
+
+    <TextView
+        android:id="@+id/prototypelatttitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Latitude:"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prototypelontitle" />
+
+    <TextView
+        android:id="@+id/prototypelon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Keine letzte Position"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/prototypelontitle"
+        app:layout_constraintStart_toStartOf="@+id/prototypereturncode" />
+
+    <TextView
+        android:id="@+id/prototypelat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Keine letzte Position"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/prototypelatttitle"
+        app:layout_constraintStart_toStartOf="@+id/prototypelon" />
+
+    <Button
+        android:id="@+id/prototypestartbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prototypelat" />
+
+    <Button
+        android:id="@+id/prototypestopbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="Stopp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/prototypestartbutton"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
