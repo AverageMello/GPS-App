@@ -13,7 +13,7 @@ import java.util.Random
 
 class MainActivity : AppCompatActivity() {
 
-    val gpshandler = GPSPosition()
+    val gpshandler = GPSPosition(this)
     private var prototypeStartButton: Button? = null
     private var prototypeStopButton: Button? = null
     private var prototypeStatus: TextView? = null

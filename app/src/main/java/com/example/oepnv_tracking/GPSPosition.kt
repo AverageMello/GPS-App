@@ -1,5 +1,6 @@
 package com.example.oepnv_tracking
 
+import android.app.Activity
 import android.content.pm.PackageManager
 import android.os.Handler
 import android.os.Looper
@@ -12,18 +13,18 @@ import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.Priority
 import com.google.android.gms.tasks.CancellationTokenSource
 
-class GPSPosition {
+class GPSPosition (aktivitaet: Activity){
 
     //Initialisieren von notwendigen Values bzw. Variables
     private val looperThread = LooperProzess()
-    private var fusedLocationProviderClient: FusedLocationProviderClient
+    private val fusedLocationProviderClient: FusedLocationProviderClient
     private var sollUebertragen: Boolean = false
+    private val akt = aktivitaet
 
     init {
         //Starte den unendlichen Looper Thread
         looperThread.start()
-
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(MainActivity())
+        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(akt)
     }
 
     fun starteUebertragen(test: TextView, test1: TextView) {
